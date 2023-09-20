@@ -13,10 +13,14 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
+
+import ThemeToggleButton from './ThemeToggleButton'; // Importa el componente del botón
+  
+
 const pages = ['About Me', 'Skills', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-export function NavBar() {
+export function NavBar({ toggleTheme, theme }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -154,6 +158,9 @@ export function NavBar() {
               ))}
             </Menu>
           </Box>
+
+          <ThemeToggleButton toggleTheme={toggleTheme}  theme={theme}/> {/* Incorpora el botón */}
+          
         </Toolbar>
       </Container>
     </AppBar>
