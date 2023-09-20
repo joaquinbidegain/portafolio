@@ -4,7 +4,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React, { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 
-
 function App() {
   const [theme, setTheme] = useState('light'); // Estado para el tema
 
@@ -14,16 +13,16 @@ function App() {
   };
 
   // Crea un tema personalizado basado en el modo actual
-  const customTheme  = createTheme({
+  const customTheme = createTheme({
     palette: {
       mode: theme,
     },
   });
 
   return (
-    <ThemeProvider theme={customTheme }>
+    <ThemeProvider theme={customTheme}>
       <CssBaseline />
-      <NavBar toggleTheme={toggleTheme} /> {/* Pasa la función al componente NavBar */}
+      <NavBar toggleTheme={toggleTheme} theme={theme} /> {/* Pasa el tema como prop */}
       <CenteredText />
     </ThemeProvider>
   );

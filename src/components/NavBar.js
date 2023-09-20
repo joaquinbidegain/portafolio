@@ -20,7 +20,7 @@ import ThemeToggleButton from './ThemeToggleButton'; // Importa el componente de
 const pages = ['About Me', 'Skills', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-export function NavBar({ toggleTheme }) {
+export function NavBar({ toggleTheme, theme }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -159,7 +159,7 @@ export function NavBar({ toggleTheme }) {
             </Menu>
           </Box>
 
-          <ThemeToggleButton toggleTheme={toggleTheme} /> {/* Incorpora el botón */}
+          <ThemeToggleButton toggleTheme={toggleTheme}  theme={theme}/> {/* Incorpora el botón */}
           
         </Toolbar>
       </Container>
