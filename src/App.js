@@ -1,8 +1,9 @@
 import './App.css';
-import { NavBar, CenteredText } from './components/index';
+import { NavBar, Layout } from './components/index';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React, { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
+
 
 function App() {
   const [theme, setTheme] = useState('light'); // Estado para el tema
@@ -23,7 +24,7 @@ function App() {
     <ThemeProvider theme={customTheme}>
       <CssBaseline />
       <NavBar toggleTheme={toggleTheme} theme={theme} /> {/* Pasa el tema como prop */}
-      <CenteredText />
+      <Layout />
     </ThemeProvider>
   );
 }
