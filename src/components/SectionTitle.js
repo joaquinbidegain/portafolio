@@ -3,16 +3,14 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 import Container from '@mui/material/Container';
 
-import TwoColumns from './TwoColumns'; 
 
-export default function SectionAboutMe() {
+
+export default function SectionTitle() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="xl" sx={{ bgcolor: '#c8cdd0', height: '100vh'}}>
-        
-        <TwoColumns/>
-        
+      <Container maxWidth="xl" sx={{ bgcolor: '#c8cdd0', height: '100vh' }}>
+
       </Container>
     </React.Fragment>
   );
