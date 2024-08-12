@@ -1,5 +1,5 @@
 import './App.css';
-import { NavBar, Layout } from './components/index';
+import { NavBar, SectionBody, SectionAboutMe, SectionSkills, SectionContact } from './components/index';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React, { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -24,7 +24,11 @@ function App() {
     <ThemeProvider theme={customTheme}>
       <CssBaseline />
       <NavBar toggleTheme={toggleTheme} theme={theme} /> {/* Pasa el tema como prop */}
-      <Layout />
+
+        <SectionBody/>
+        <SectionAboutMe/>
+        <SectionSkills/>
+        <SectionContact/>
     </ThemeProvider>
   );
 }
